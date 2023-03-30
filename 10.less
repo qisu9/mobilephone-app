@@ -1,0 +1,187 @@
+//解决高度塌陷问题
+.clearfix::after,
+.clearfix::before{
+                content: '';
+                display: table;
+                clear: both;
+}
+
+//设置字体大小
+html{
+                font-size: (100vw/750)*40;
+                background-color: #EfF0F4;
+                //设置超链接样式
+                a{
+                                text-decoration: none;
+                                color: #999999;
+                }
+
+}
+
+.w{
+                width: (693/40rem);
+                margin: 0 auto;
+}
+
+//设置外部容器外边距
+.wrapper:extend(.w){
+                height: (175/40rem);
+}
+
+//设计顶部
+.nav-bar{
+                //设置.nav-var为弹性容器
+                display: flex;
+                // background-color: red;
+
+                //设置内容间隔
+                justify-content: space-between;
+                padding:25px 0px;
+
+                //设置内容元素
+}
+
+//设置上部分
+.top-bar{
+                .picture{
+                //设置图片大小
+                                img{
+                                                width: 100%;
+                                }
+
+                                // background-color: red;
+                                vertical-align: baseline;
+                                margin-bottom: 15px;
+                }
+                
+                //设置分类区域
+                .categorize{
+                                //设置字体样式
+                                span,
+                                i{
+                                                color: #FAFFFC;
+                                                font-size: 14px;
+                                }
+
+                                //设置图标和字体之间的边距
+                                i{
+                                                padding-right: 8px;
+                                }
+
+                                //设置两个容器flex
+                                .cate-top,
+                                .cate-bottom{
+                                                //设置弹性容器
+                                                display: flex;
+                                                justify-content: space-between;
+                                }
+
+                                //分别设置四个区域的背景颜色
+                                .cate-top{
+                                                .items-1{
+                                                                background-color: #FF7B4D;
+                                                }
+
+                                                .items-2{
+                                                                background-color: #D68EFF;
+                                                }
+                                }
+
+                                .cate-bottom{
+                                                .items-3{
+                                                                background-color: #FF5171;
+                                                }
+
+                                                .items-4{
+                                                                background-color: #0AB1FD;
+                                                }
+                                }
+
+                                //设置每个li的样式
+                                li{
+                                                display: block;
+                                                width: 160px;
+                                                height: 55px;
+                                                // background-color: red;
+                                                text-align: center;
+                                                line-height: 55px;
+                                                margin-bottom: 15px;
+                                                border-radius: 10px;
+                                                // align-items: center;
+                                }
+                }
+}
+
+.center-bar{
+                // 隐藏溢出内容
+                // overflow: hidden;
+
+                // 设置顶部
+                .center-top{
+                                // 设置flex
+                                display: flex;
+                                justify-content: space-between;
+                                margin-bottom: 15px;
+
+                                // 设置标题部分
+                                .center-title{
+                                                display: flex;
+                                }
+                }
+
+                // 设置分区部分
+                .center-cate{
+                                display: flex;
+                                overflow: auto;
+
+                                li{
+                                                display: block;
+                                                width: 160px;
+                                                height: 165px;
+                                                margin-right: 10px;
+                                                background-color: #FEFEFC;
+                                                border-radius: 10px;
+                                                text-align: center;
+                                                margin-bottom: 15px;
+
+                                                // 设置图片标题
+                                                span.img-title{
+                                                                font-size: 15px;
+                                                                // background-color: red;
+                                                                color: #4F5159;
+                                                }
+
+                                                // 设置个人名字
+                                                span.img-name{
+                                                                font-size: 13px;
+                                                                display: block;
+                                                                // background-color: red;
+                                                                height: 30px;
+                                                                line-height: 30px;
+                                                                margin-left: 8px;
+                                                }
+                                                
+                                                // 设置文章配图
+                                                img.center-pic{
+
+                                                                width: 140px;
+                                                                margin: 10px;
+                                                                margin-bottom: 5px;
+                                                                // background-color: red;
+                                                }
+
+                                                // 设置个人头像
+                                                img.center-head{
+                                                                width: 30px;
+                                                                // background-color: red;
+                                                }
+
+                                                // 设置个人信息部分
+                                                .privacy{
+                                                                // background-color: red;
+                                                                display: flex;
+                                                                margin: 10px ;
+                                                }
+                                }
+                }
+}
